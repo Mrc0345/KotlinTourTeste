@@ -1,9 +1,11 @@
 /*
-Nível: Beginner
-Tópico: Variables
+Level: Beginner
+Topic: Variables
 */
 
+// Exercise
+
 val name = "Mary"
-var age = 20
+val age = 20
 
 println("$name is $age years old")

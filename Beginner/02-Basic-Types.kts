@@ -3,12 +3,11 @@ Level: Beginner
 Topic: Basic Types
 */
 
-val name: String = "John"
-val age: Int = 25
-val height: Double = 1.78
-val isStudent: Boolean = true
+// Exercise
 
-println("Name: $name")
-println("Age: $age")
-println("Height: $height")
-println("Student: $isStudent")
+val a: Int = 1000
+val b: String = "log message"
+val c: Double = 3.14
+val d: Long = 100_000_000_000_000
+val e: Boolean = false
+val f: Char = '\n'
