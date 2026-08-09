@@ -3,19 +3,30 @@ Level: Beginner
 Topic: Collections
 */
 
-val fruits = listOf("Apple", "Banana", "Orange")
+// Exercise 1
 
-println(fruits)
-println(fruits[0])
+val greenNumbers = listOf(1, 4, 23)
+val redNumbers = listOf(17, 2)
 
-val numbers = mutableListOf(10, 20, 30)
-numbers.add(40)
+println("There are ${greenNumbers.count() + redNumbers.count()} numbers in total")
 
-println(numbers)
 
-val student = mapOf(
-    "name" to "John",
-    "course" to "Kotlin"
+// Exercise 2
+
+val SUPPORTED = setOf("HTTP", "HTTPS", "FTP")
+val requested = "smtp"
+
+val isSupported = requested.uppercase() in SUPPORTED
+
+println("Support for $requested: $isSupported")
+
+
+// Exercise 3
+
+val number2word = mapOf(
+    1 to "one",
+    2 to "two",
+    3 to "three"
 )
 
-println(student["name"])
+println(number2word[2])
