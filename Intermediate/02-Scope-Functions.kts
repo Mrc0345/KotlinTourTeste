@@ -1,0 +1,56 @@
+/*
+Nivel: Intermediate
+Topico: Scope Functions
+*/
+
+// Exercicio 1
+
+
+
+data class ProductInfo(val priceInDollars: Double?)
+
+class Product {
+    fun getProductInfo(): ProductInfo? {
+        return ProductInfo(100.0)
+    }
+}
+
+fun Product.getPriceInEuros() =
+    getProductInfo()?.priceInDollars?.let {
+        convertToEuros(it)
+    }
+
+fun convertToEuros(dollars: Double): Double {
+    return dollars * 0.85
+}
+
+val product = Product()
+val priceInEuros = product.getPriceInEuros()
+
+if (priceInEuros != null) {
+    println("Price in Euros: €$priceInEuros")
+} else {
+    println("Price information is not available.")
+}
+
+
+// Exercicio 2
+
+
+
+data class User(
+    val id: Int,
+    var email: String
+)
+
+fun updateEmail(user:User, newEmail: String): User =
+    user.apply {
+        email = newEmail
+    }.also {
+        println("Updating email for user with ID: ${it.id}")
+    }
+
+val user = User(1, "old_email@example.com")
+val updatedUser = updateEmail(user, "new_email@example.com")
+
+println("Updated User: $updatedUser")
